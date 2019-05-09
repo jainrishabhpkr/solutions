@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% block content%}
+
+
+
+<h1>Detail of Products</h1>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h1>TITLE:- {{product.title}}</h1><br>
+       description:-{{product.description|linebreaks}}<br>
+      price:- {{product.price}}<br>
+      {%if product.image%}<br>
+      categories:- {{product.categories}}<br>
+      <img src="{{product.image.url}}" alt="">
+      {%endif%}
+    </div>
+
+  </div>
+</div>
+{% endblock%}
